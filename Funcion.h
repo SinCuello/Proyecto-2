@@ -37,7 +37,10 @@ Funcion::Funcion()
 
 Funcion::Funcion(Hora _hora, int _numpeli, int _sala, string _cveFuncion)
 {
-
+    hora=_hora;
+    numPeli=_numpeli;
+    sala=_sala;
+    cveFuncion=_cveFuncion;
 }
 
 
