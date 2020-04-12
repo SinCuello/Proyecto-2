@@ -1,0 +1,49 @@
+#include <iostream>
+// #include <fstream>
+// #include <string>
+
+// using namespace std;
+// int main()
+// {
+//   ifstream archEntrada;
+//   int numero;
+//   string linea, parrafo, numerostring;
+//   // archEntrada.open("actores.txt");
+//   // while(getline(archEntrada,linea))
+//   // {
+//   //   parrafo=linea;
+//   //   numerostring=parrafo.substr(0,2);
+//   //   parrafo.erase(0,2);
+//   //   numero=stoi(numerostring);
+//   //   cout<<numero<<" "<<parrafo<<endl;
+//   // }
+//   string primeraParte;
+//   int a,b,c;
+//   string genero;
+//   archEntrada.open("peliculas.txt");
+//   while(getline(archEntrada,linea))
+//   {
+//     parrafo=linea;
+//     numerostring=parrafo.substr(0,3);
+//     a=stoi(numerostring);
+//     cout<<a<<endl;
+//     numerostring=parrafo.substr(4,4);
+//     b=stoi(numerostring);
+//     cout<<b<<endl;
+//     numerostring=parrafo.substr(9,3);
+//     c=stoi(numerostring);
+//     cout<<c<<endl;
+//     numerostring=parrafo.substr(13,5);
+//     genero=numerostring;
+//     cout<<genero<<endl;
+//     parrafo.erase(0,18);
+//     cout<<parrafo<<endl;
+//   }
+// }
+
+ El atributo listaActores de la clase Película es un arreglo de 10 elementos, en
+este arreglo se almacenan los actores principales de la película.
+• El atributo cantidadActores de la clase Película
+
+Me quede en que agregue los metodos que me faltaba de pelicula me quede tambien en meter los datos en los objetos y em quede atasacado en eso de cuantos actores se necesitan de la
+los objeots tengo muy porbablemnte lei mal y necesito checar la redaccion

@@ -14,13 +14,13 @@ public:
     int getid(){return id;};
     void setnombre(string y){nombre=y;};
     string getnombre(){return nombre;};
-    void muestraAtor();
+    void muestraActor();
 };
 
 Actor::Actor()
 {
     id=0;
-    nombre="prueba"
+    nombre="prueba";
 }
 
 Actor::Actor(int x, string y)

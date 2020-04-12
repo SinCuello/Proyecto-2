@@ -14,8 +14,8 @@ int main()
 
     //Variables para leer el archivo actores
     //------------------
-    int id, contador;//|
-    string nombre;   //|
+    int numero, contador;
+    string linea, parrafo, numerostring;
     //------------------
     ifstream archEntrada;
 
@@ -23,25 +23,19 @@ int main()
 
     archEntrada.open("actores.txt");
 
-    while(archEntrada>>id>>getline(archEntrada, nombre))
+    while(getline(archEntrada,linea))
     {
-        Actor[contador].setid(id);
-        Actor[contador].setnombre(nombre);
+        parrafo=linea;
+        numerostring=parrafo.substr(0,2);
+        numero=stoi(numerostring);
+        parrafo.erase(0,2);
+        actores[contador].setid(numero);
+        actores[contador].setnombre(parrafo);
         contador++;
     }
-    //-----------------------
-    contador=0;
-    int numpeli, anio, duracion, cantActores, cantActoresEx, idx;
-    string genero, titulo;
-    archEntrada.open("peliculas.txt");
-
-    while(archEntrada>>numpeli>>anio>>duracion>>genero>>cantActores>>cantActoresEx>>idx>>getline(archEntrada,titulo))
+    for(int i=0; i<=20; i++)
     {
-        peliculas[contador].setnumPeli(numpeli);
-        peliculas[contador].setanio(anio);
-        peliculas[contador].setduracion(duracion);
-        peliculas[contador].setgenero(genero);
-
+        cout<<actores[i].muestraActor()<<endl;
     }
 
     return 0;
