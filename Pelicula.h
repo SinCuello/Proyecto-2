@@ -1,15 +1,16 @@
 #include <iostream>
 #include <string>
 #include "Actor.h"
-template <size_t cantActores>
 
 using namespace std;
 
 class Pelicula
 {
 private:
-    int numPeli, anio, duracion, cantActores=10;
-    Actor listaActores[cantActores];
+    int numPeli, anio, duracion, cantActores=0;
+    Actor listaActores[10];
+
+    int _listaActores[20];
     string titulo, genero;
 public:
 
@@ -23,11 +24,15 @@ public:
     int getduracion(){return duracion;};
     void settitulo(string d){titulo=d;};//Modificacion titulo
     string gettitulo(){return titulo;};
+
     void setgenero(string e){genero=e;};//Modificacioin genero
-    string get(){return genero;};
+    string getgenero(){return genero;};
 
     void setlistaActores(int f){cantActores=f;};//Unico metodo de acceso a la cantidad de actores
     int getlistActores(){return cantActores;};
+
+    Actor getActor(int m){return listaActores[m];};//Me regresa el actor en ese subindice
+
 
     bool agregarActor(Actor e);//Funcion para cambiar la cant de obj
 };
@@ -35,7 +40,7 @@ public:
 Pelicula::Pelicula()
 {
     cantActores=0;
-    listaActores[cantActores];
+    listaActores[10]={};
     numPeli=0;
     anio=0;
     duracion=0;
@@ -43,17 +48,19 @@ Pelicula::Pelicula()
     genero="prueba";
 }
 
-Pelicula::agregarActor(Actor e)
+bool Pelicula::agregarActor(Actor e)
 {
     bool seguridad = true;
     if(cantActores>=10)
     {
         seguridad=false;
-        return seguridad
+        cout<<"Su lista de actores ya es mayor o igual a 10"<<endl;
+        return seguridad;
     }
     else{
         cantActores+1;
         listaActores[cantActores]=e;
+        cout<<"Se ha relizado su aditamiento"<<endl;
         return seguridad;
     }
 }

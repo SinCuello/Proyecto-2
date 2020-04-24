@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include "Hora.h"
+
 using namespace std;
 
 class Funcion
@@ -14,13 +15,16 @@ public:
     Funcion();
     Funcion(Hora, int, int, string);
     //modificacion de valores y retorno de los mismos
+
     void sethora(Hora a){hora=a;};
     Hora gethora(){return hora;};
+
     void setnumPeli(int b){numPeli=b;};
     int getnumPeli(){return numPeli;};
     void setsala(int c){sala=c;};
     int getsala(){return sala;};
-    void setcveFuncion(string d)(cveFuncion=d;);
+
+    void setcveFuncion(string d){cveFuncion=d;};
     string getcveFuncion(){return cveFuncion;};
 
     void muestraFuncion();
@@ -43,4 +47,11 @@ Funcion::Funcion(Hora _hora, int _numpeli, int _sala, string _cveFuncion)
     cveFuncion=_cveFuncion;
 }
 
+void Funcion::muestraFuncion()
+{
 
+    cout<<"El numero de la pelicula es "<<numPeli<<endl;
+    cout<<"El numero de la sala es "<<sala<<endl;
+    cout<<"La clave de la funcion es "<<cveFuncion<<endl;
+    cout<<"La hora de la funcion es "<<hora.gethh()<<":"<<hora.getmm()<<endl;
+}
